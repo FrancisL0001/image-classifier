@@ -29,6 +29,7 @@ An end-to-end image classification system. Upload a photo and get the top-3 pred
 | Backend | FastAPI, PyTorch, torchvision, Pillow |
 | Model | ResNet-50 pretrained on ImageNet-1K |
 | Testing | pytest (backend), Jest + React Testing Library (frontend) |
+| Deployment | Railway (backend), Vercel (frontend) |
 
 ---
 
@@ -60,11 +61,41 @@ python main.py                   # runs on http://localhost:8000
 
 ### Frontend
 
+Create a `.env` file in `frontend/` (use `.env.example` as a reference):
+
 ```bash
 cd frontend
+cp .env.example .env             # then fill in VITE_API_URL
+```
+
+```bash
 npm install
 npm run dev                      # runs on http://localhost:5173
 ```
+
+> `VITE_API_URL` should point to wherever the backend is running — `http://localhost:8000` for local development, or your Railway URL in production.
+
+---
+
+## Deployment
+
+The backend and frontend deploy as two independent services.
+
+### Backend → Railway
+
+The backend ships with a `Dockerfile`. On Railway:
+
+1. Create a new project and connect this repository.
+2. Set the root directory to `backend/`.
+3. Railway will detect the Dockerfile and build automatically.
+4. Copy the generated service URL (e.g. `https://your-app.railway.app`).
+
+### Frontend → Vercel
+
+1. Import the repository into Vercel.
+2. Set the root directory to `frontend/`.
+3. Add an environment variable: `VITE_API_URL` → your Railway service URL.
+4. Deploy — Vercel runs `npm run build` automatically.
 
 ---
 
@@ -82,7 +113,7 @@ npm test
 
 ## CI/CD
 
-A CI pipeline should run `pytest` on the backend and `npm test` on the frontend on every push. The app is designed for deployment as two independent services (API + static frontend), making it straightforward to containerise or host on any cloud provider.
+A CI pipeline should run `pytest` on the backend and `npm test` on the frontend on every push. Both services deploy independently, making it straightforward to update either layer without redeploying the other.
 
 ---
 
