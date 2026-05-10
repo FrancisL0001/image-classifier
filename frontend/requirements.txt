@@ -1,0 +1,33 @@
+# Frontend Requirements
+# Run from the frontend/ directory: npm install
+# All packages below are defined in package.json.
+#
+# ── Runtime ─────────────────────────────────────────────────────────────────
+# react                        UI library
+# react-dom                    DOM renderer for React
+#
+# ── Build & Dev ─────────────────────────────────────────────────────────────
+# vite                         Build tool and dev server
+# @vitejs/plugin-react         Vite plugin for React (Babel-based fast refresh)
+# typescript                   TypeScript compiler
+#
+# ── Styling ─────────────────────────────────────────────────────────────────
+# tailwindcss                  Utility-first CSS framework (v4)
+# @tailwindcss/vite            Tailwind v4 Vite plugin (replaces tailwind.config.js)
+#
+# ── Testing ─────────────────────────────────────────────────────────────────
+# jest                         Test runner
+# jest-environment-jsdom       Browser-like DOM environment for Jest
+# ts-jest                      TypeScript preprocessor for Jest
+# @types/jest                  TypeScript types for Jest globals
+# @testing-library/react       React component testing utilities
+# @testing-library/jest-dom    Custom Jest matchers (toBeInTheDocument, etc.)
+# @testing-library/user-event  Realistic user interaction simulation
+# identity-obj-proxy           CSS module stub (prevents import errors in Jest)
+#
+# ── Commands ────────────────────────────────────────────────────────────────
+# npm install          Install all dependencies
+# npm run dev          Start development server (http://localhost:5173)
+# npm run build        Type-check and produce production build
+# npm run preview      Serve the production build locally
+# npm test             Run Jest test suite

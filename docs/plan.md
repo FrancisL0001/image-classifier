@@ -74,18 +74,15 @@ The response will be a JSON object containing the top 3 predictions, their proba
   "predictions": [
     {
       "label": "cat",
-      "probability": 0.85,
-      "confidence_score": 0.9
+      "probability": 0.85
     },
     {
       "label": "dog",
-      "probability": 0.10,
-      "confidence_score": 0.8
+      "probability": 0.10
     },
     {
       "label": "rabbit",
-      "probability": 0.05,
-      "confidence_score": 0.7
+      "probability": 0.05
     }
   ]
 }
