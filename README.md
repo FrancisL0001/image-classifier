@@ -2,7 +2,7 @@
 
 An end-to-end image classification system. Upload a photo and get the top-3 predicted labels with confidence scores, powered by a pretrained ResNet-50 CNN served through a REST API.
 
-**Live app → [image-classifier-nu.vercel.app](https://image-classifier-nu.vercel.app)**
+**Live app → <a href="https://image-classifier-nu.vercel.app" target="_blank">image-classifier-nu.vercel.app</a>**
 
 ---
 

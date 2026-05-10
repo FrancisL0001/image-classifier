@@ -12,7 +12,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
-# Allow CORS for all origins (you can restrict this in production)
+# Allow CORS for all vercel app origins
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["https://image-classifier-nu.vercel.app"],
