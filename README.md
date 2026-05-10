@@ -11,6 +11,14 @@ An end-to-end image classification system. Upload a photo and get the top-3 pred
 - Returns the top-3 predictions with confidence scores in real time
 - Built on a client-server architecture: React frontend → FastAPI backend
 
+![Home screen](homescreen.png)
+
+---
+
+## Preview
+
+![Sample prediction](sample.png)
+
 ---
 
 ## Stack
