@@ -26,6 +26,20 @@ An end-to-end image classification system. Upload a photo and get the top-3 pred
 
 ## Getting started
 
+### Clone the repository
+
+```bash
+git clone git@github.com:FrancisL0001/image-classifier.git
+cd image-classifier
+```
+
+Or with HTTPS:
+
+```bash
+git clone https://github.com/FrancisL0001/image-classifier.git
+cd image-classifier
+```
+
 ### Backend
 
 ```bash
