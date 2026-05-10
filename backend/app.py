@@ -15,7 +15,7 @@ app = FastAPI()
 # Allow CORS for all origins (you can restrict this in production)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["https://image-classifier-nu.vercel.app"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
