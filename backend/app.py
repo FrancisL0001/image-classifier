@@ -16,6 +16,7 @@ app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["https://image-classifier-nu.vercel.app"],
+    allow_origin_regex=r"https://image-classifier.*\.vercel\.app",
     allow_methods=["*"],
     allow_headers=["*"],
 )
